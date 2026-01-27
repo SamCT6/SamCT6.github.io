@@ -9,6 +9,7 @@ body {
   }
 
   .ResName{
+    text-align: center;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Trees_in_ICM_on_Myrstigen_hiking_trail%2C_Brastad_2.jpg/640px-Trees_in_ICM_on_Myrstigen_hiking_trail%2C_Brastad_2.jpg");
   }
 
@@ -29,6 +30,7 @@ body {
   h1 {
     color: black;
     font-size: 54px;
+    background-color: rgba(0, 0, 0, 0.258);
   }
 
 
