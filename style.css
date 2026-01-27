@@ -11,12 +11,31 @@ body {
   .ResName{
     background-color: navy;
   }
+
+  .MenuColumnPhotos {
+    display: flex; /* Makes the child elements align in a row */
+    gap: 20px; /* Adds space between columns */
+    background-color: darkblue;
+  }
+  
+  .Column {
+    flex: 1; /* Makes columns grow equally to fill the container */
+    padding: 10px;
+    /* Add other styling as needed */
+  }
+  
  
 
   h1 {
-    color: darkgray;
+    color: white;
     font-size: 54px;
   }
+
+  h2 {
+    color: red;
+    font-size: 24px;
+  }
+
   
   h3{
     font-size: large;
