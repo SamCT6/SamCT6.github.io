@@ -8,15 +8,24 @@ body {
     padding: 20px;
   }
 
-  .ResName{
+  .bg-navy {
+    background-color: navy; /* Example of a common navy blue hex code */
+  }
+
+  .navbar-white{
+    color: white;
+  }
+
+  .jumbotron{
+    text-shadow: 0.25px 0.25px 0.25px #000000;
+    align-items: center;
     text-align: center;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Trees_in_ICM_on_Myrstigen_hiking_trail%2C_Brastad_2.jpg/640px-Trees_in_ICM_on_Myrstigen_hiking_trail%2C_Brastad_2.jpg");
   }
 
-  .MenuColumnPhotos {
-    display: flex; /* Makes the child elements align in a row */
-    gap: 20px; /* Adds space between columns */
-    background-color: darkblue;
+
+  .navbar navbar-expand-lg navbar-light bg-light{
+    max-height: 80px;
   }
   
   .Column {
@@ -27,10 +36,14 @@ body {
   
  
 
-  h1 {
+  .jumbotron h1 {
     color: black;
     font-size: 54px;
-    background-color: rgba(0, 0, 0, 0.258);
+  }
+
+  .jumbotron h2 {
+    color: black;
+    font-size: rem.5;
   }
 
 
