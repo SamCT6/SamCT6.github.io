@@ -3,8 +3,8 @@ body {
     background-color: lightgray;
     text-align: center;
     font-family: "Nunito", sans-serif;
-
   }
+  
   div {
     margin: 20px;
     padding: 20px;
@@ -36,7 +36,6 @@ body {
     /* Add other styling as needed */
   }
   
- 
 
   .jumbotron h1 {
     color: black;
