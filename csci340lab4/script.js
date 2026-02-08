@@ -1,15 +1,16 @@
 
 
-var fact = "";
+var answer = "";
 var corp = "";
 
-$("#GetFact").on("click", function() {
-    console.log("number");
-    $.get("https://uselessfacts.jsph.pl/api/v2/facts/random", (data, status) =>{
+
+$("#GetAnswer").on("click", function() {
+    console.log("answer");
+    $.get("https://yesno.wtf/api", (data, status) =>{
         console.log(data);
-        const fact = data.text;
-        $(".fact").text(fact)
-    });
+        const answer = data.answer;
+        $(".fact").text(answer)
+        });
   });
 
   $("#GetCorp").on("click", function() {
