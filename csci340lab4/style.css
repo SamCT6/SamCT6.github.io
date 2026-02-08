@@ -1,1 +1,19 @@
 
+.container {
+    display: flex; /* Makes child items sit side-by-side */
+    justify-content: space-around; /* Optional: Distributes space evenly */
+  }
+  
+  .fact {
+    /* Optional styling */
+    padding: 10px;
+    border: 1px solid black;
+    flex: 1; /* Optional: Makes items grow to fill equal width */
+  }
+
+  .corp {
+    /* Optional styling */
+    padding: 10px;
+    border: 1px solid black;
+    flex: 1; /* Optional: Makes items grow to fill equal width */
+  }
