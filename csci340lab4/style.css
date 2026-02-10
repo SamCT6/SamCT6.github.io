@@ -5,7 +5,7 @@
     padding-bottom: 30px;
   }
   
-  .fact {
+  .answer {
     /* Optional styling */
     padding: 10px;
     border: 1px solid black;
@@ -107,7 +107,7 @@
     gap: 200px; /* Uniform spacing between all buttons */
   }
 
-  #GetFact{
+  #GetAnswer{
     padding: 10px;
     font-size: large;
     background-color: rgb(216, 194, 154);
@@ -128,7 +128,7 @@
     font-family: "DM Serif Text", serif;
   }
 
-  .fact{
+  .answer{
     background-color: rgb(216, 194, 154);
     text-align: center;  
   }

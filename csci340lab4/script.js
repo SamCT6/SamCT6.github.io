@@ -9,7 +9,7 @@ $("#GetAnswer").on("click", function() {
     $.get("https://yesno.wtf/api", (data, status) =>{
         console.log(data);
         const answer = data.answer;
-        $(".fact").text(answer)
+        $(".answer").text(answer)
         });
   });
 
