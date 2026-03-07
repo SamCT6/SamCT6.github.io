@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csci340lab8", "csci340lab8", "{0FFCAD5D-3167-444A-BB4C-F29D20341199}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesBaseball", "csci340lab8\RazorPagesBaseball\RazorPagesBaseball.csproj", "{E62636B9-B142-48C2-B18E-D86226D6FE86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E62636B9-B142-48C2-B18E-D86226D6FE86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62636B9-B142-48C2-B18E-D86226D6FE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62636B9-B142-48C2-B18E-D86226D6FE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62636B9-B142-48C2-B18E-D86226D6FE86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E62636B9-B142-48C2-B18E-D86226D6FE86} = {0FFCAD5D-3167-444A-BB4C-F29D20341199}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F604E63-D12C-4F1C-AF72-CD2881A3F2A5}
+	EndGlobalSection
+EndGlobal
