@@ -5,7 +5,7 @@ namespace RazorPagesBaseball.Models;
 public class Games
 {
     public int Id { get; set; }
-    public string? Opponets { get; set; }
+    public string? Opponent { get; set; }
     [DataType(DataType.Date)]
     public DateTime GameDate { get; set; }
     public string? WinOrLoss { get; set; }
