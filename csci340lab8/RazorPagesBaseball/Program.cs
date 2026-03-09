@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RazorPagesBaseball.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<RazorPagesBaseballContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("RazorPagesBaseballContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesBaseballContext' not found.")));
 
 var app = builder.Build();
 
