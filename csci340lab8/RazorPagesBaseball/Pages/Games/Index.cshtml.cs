@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesBaseball.Data;
 using RazorPagesBaseball.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace RazorPagesBaseball.Pages.Games
 {
@@ -21,9 +22,41 @@ namespace RazorPagesBaseball.Pages.Games
 
         public IList<Game> Game { get;set; } = default!;
 
-        public async Task OnGetAsync()
-        {
-            Game = await _context.Game.ToListAsync();
+        [BindProperty(SupportsGet = true)]
+        public string? SearchString { get; set; }
+
+        public SelectList? Opponent { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string? GameOpponent { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string? GameResult { get; set; }
+
+        public SelectList? Results { get; set; }
+
+
+            public async Task OnGetAsync() 
+            {
+                IQueryable<string> resultQuery = from m in _context.Game
+                                                orderby m.Result
+                                                select m.Result;
+
+                var games = from m in _context.Game
+                            select m;
+
+                if (!string.IsNullOrEmpty(SearchString))
+                {
+                    games = games.Where(s => s.Opponent.Contains(SearchString));
+                }
+
+                if (!string.IsNullOrEmpty(GameResult))
+                {
+                    games = games.Where(x => x.Result == GameResult);
+                }
+
+                Results = new SelectList(await resultQuery.Distinct().ToListAsync());
+                Game = await games.ToListAsync();
+            }
         }
     }
-}
