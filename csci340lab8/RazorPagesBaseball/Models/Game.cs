@@ -1,5 +1,4 @@
-<PackageReference Include="Microsoft.Extensions.Validation" Version="10.0.1" />
-builder.Services.AddValidation();
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,15 +21,11 @@ public class Game
     [StringLength(30)]
     public string Result { get; set; } = string.Empty;
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
-    [StringLength(5)]
     [Required]
-    public string HomeScore { get; set; } = string.Empty;
+    public int HomeScore { get; set; }
 
-    [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
-    [StringLength(5)]
     [Required]
-    public string OpponentScore { get; set; } = string.Empty;
+    public int OpponentScore { get; set; }
 
     [Range(1, 100)]
     [DataType(DataType.Currency)]
