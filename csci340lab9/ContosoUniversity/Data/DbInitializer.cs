@@ -23,6 +23,14 @@ namespace ContosoUniversity.Data
                 Age = 18
             };
 
+            var notdoingwell = new Student
+            {
+                FirstMidName = "Matt",
+                LastName = "Notdoingwell",
+                EnrollmentDate = DateTime.Parse("2019-09-01"),
+                Age = 25
+            };
+
             var alonso = new Student
             {
                 FirstMidName = "Meredith",
@@ -88,7 +96,8 @@ namespace ContosoUniversity.Data
                 li,
                 justice,
                 norman,
-                olivetto
+                olivetto,
+                notdoingwell
             };
 
             context.AddRange(students);
@@ -275,6 +284,44 @@ namespace ContosoUniversity.Data
             var enrollments = new Enrollment[]
             {
                 new Enrollment {
+                    Student = notdoingwell,
+                    Course = chemistry,
+                    Grade = Grade.I
+                },
+                new Enrollment {
+                    Student = notdoingwell,
+                    Course = calculus,
+                    Grade = Grade.W
+                },
+                new Enrollment {
+                    Student = notdoingwell,
+                    Course = composition,
+                    Grade = Grade.W
+                },
+                new Enrollment {
+                    Student = notdoingwell,
+                    Course = literature,
+                    Grade = Grade.W
+                },
+                new Enrollment {
+                    Student = notdoingwell,
+                    Course = trigonometry,
+                    Grade = Grade.I
+                },new Enrollment {
+                    Student = notdoingwell,
+                    Course = microeconomics,
+                    Grade = Grade.W
+                },new Enrollment {
+                    Student = notdoingwell,
+                    Course = macroeconmics,
+                    Grade = Grade.I
+                },
+                new Enrollment {
+                    Student = notdoingwell,
+                    Course = chemistry,
+                    Grade = Grade.I
+                },
+                new Enrollment {
                     Student = alexander,
                     Course = chemistry,
                     Grade = Grade.A
@@ -314,6 +361,11 @@ namespace ContosoUniversity.Data
                     Grade = Grade.B
                 },
                 new Enrollment {
+                    Student = anand,
+                    Course = literature,
+                    Grade = Grade.B
+                },
+                new Enrollment {
                     Student = barzdukas,
                     Course = chemistry,
                     Grade = Grade.B
@@ -324,11 +376,18 @@ namespace ContosoUniversity.Data
                     Grade = Grade.B
                 },
                 new Enrollment {
+                    Student = li,
+                    Course = literature,
+                    Grade = Grade.C
+                },
+                new Enrollment {
                     Student = justice,
                     Course = literature,
                     Grade = Grade.B
-                }
-            };
+                },
+
+
+                };
 
             context.AddRange(enrollments);
             context.SaveChanges();
