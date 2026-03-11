@@ -30,7 +30,7 @@ namespace ContosoUniversity.Pages.Students
         return NotFound();
     }
 
-    Student = await _context.Student.FindAsync(id);
+    Student = await _context.Students.FindAsync(id);
 
     if (Student == null)
     {
@@ -41,7 +41,7 @@ namespace ContosoUniversity.Pages.Students
 
 public async Task<IActionResult> OnPostAsync(int id)
 {
-    var studentToUpdate = await _context.Student.FindAsync(id);
+    var studentToUpdate = await _context.Students.FindAsync(id);
 
     if (studentToUpdate == null)
     {
@@ -63,7 +63,7 @@ public async Task<IActionResult> OnPostAsync(int id)
 
         private bool StudentExists(int id)
         {
-            return _context.Student.Any(e => e.ID == id);
+            return _context.Students.Any(e => e.ID == id);
         }
     }
 }
